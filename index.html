@@ -20,9 +20,9 @@
     .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:12px;font-weight:800;margin:5px;border:1px solid transparent}.btn-primary{background:var(--gold);color:#1c291f}.btn-outline{border-color:rgba(255,255,255,.5);color:#fff}
     section{padding:88px 0}.section-head{max-width:720px;margin-bottom:35px}.eyebrow{color:var(--forest2);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.section-head h2{font-size:clamp(30px,4vw,46px);margin:8px 0 10px;line-height:1.1}.section-head p{color:var(--muted)}
     .about{background:#fff}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.quote{background:var(--forest);color:#fff;border-radius:24px;padding:34px;box-shadow:0 20px 50px rgba(23,63,53,.15)}.quote strong{font-size:26px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px rgba(30,60,50,.08);border:1px solid rgba(23,63,53,.08)}.card-art{height:190px;background:linear-gradient(135deg,#245c49,#173f35);display:grid;place-items:center;color:#fff;font-size:58px}.card-body{padding:22px}.card h3{margin:0 0 7px;font-size:21px}.card p{margin:0;color:var(--muted);font-size:14px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 35px rgba(30,60,50,.08);border:1px solid rgba(23,63,53,.08)}.card-photo{width:100%;height:190px;object-fit:cover;display:block}.card-body{padding:22px}.card h3{margin:0 0 7px;font-size:21px}.card p{margin:0;color:var(--muted);font-size:14px}
     .culture{background:#eadfca}.culture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.tile{padding:25px;background:rgba(255,255,255,.7);border-radius:18px}.tile b{display:block;margin-bottom:5px}
-    .gallery{background:#fff}.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:14px}.gallery-box{border-radius:18px;background:linear-gradient(135deg,#173f35,#d7a83e);display:grid;place-items:end;padding:18px;color:#fff;font-weight:800;overflow:hidden}.gallery-box:first-child{grid-row:span 2}
+    .gallery{background:#fff}.gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:180px;gap:14px}.gallery-box{border-radius:18px;background:#173f35;display:grid;place-items:end;padding:18px;color:#fff;font-weight:800;overflow:hidden;position:relative}.gallery-box:first-child{grid-row:span 2}.photo-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo-box:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.72))}.photo-box span{position:relative;z-index:2}
     .contact{background:var(--forest);color:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-card{background:rgba(255,255,255,.08);padding:28px;border-radius:20px}.contact-card p{opacity:.82}.contact .eyebrow{color:#f2c95b}
     footer{background:#0e2923;color:#c8d5d0;padding:25px 0;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px}
     .wa{position:fixed;right:22px;bottom:22px;z-index:20;background:#1f9d62;color:#fff;padding:14px 18px;border-radius:999px;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.2)}
@@ -34,7 +34,7 @@
 <header>
   <nav class="container">
     <a class="brand" href="#beranda">
-      <img src="assets/logo-pokdarwis.png" alt="Logo Pokdarwis Peteri Pukes Mendale">
+      <img src="logo-pokdarwis.png" alt="Logo Pokdarwis Peteri Pukes Mendale">
       <span>POKDARWIS<small>PETERI PUKES MENDALE</small></span>
     </a>
     <div class="links">
@@ -73,9 +73,9 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Destinasi</span><h2>Tempat yang patut dijelajahi</h2><p>Kenali beberapa daya tarik wisata yang menjadi bagian dari cerita Peteri Pukes Mendale.</p></div>
     <div class="cards">
-      <article class="card"><div class="card-art">💧</div><div class="card-body"><h3>Air Terjun</h3><p>Segarnya alam dan suasana hijau untuk menikmati ketenangan serta kesejukan Mendale.</p></div></article>
-      <article class="card"><div class="card-art">🪨</div><div class="card-body"><h3>Goa Manusia Purba</h3><p>Destinasi bernuansa sejarah dan geologi yang mengundang rasa ingin tahu para penjelajah.</p></div></article>
-      <article class="card"><div class="card-art">🌿</div><div class="card-body"><h3>Goa Putri Pukes</h3><p>Jelajahi ruang alam yang lekat dengan cerita dan legenda yang diwariskan turun-temurun.</p></div></article>
+      <article class="card"><img class="card-photo" src="assets/wisata-mendale.jpg" alt="Pemandangan wisata Mendale"><div class="card-body"><h3>Wisata Mendale</h3><p>Nikmati suasana alam, danau, dan keramahan masyarakat Mendale dalam satu perjalanan.</p></div></article>
+      <article class="card"><img class="card-photo" src="assets/goa-manusia-purba-1.jpg" alt="Goa Manusia Purba"><div class="card-body"><h3>Goa Manusia Purba</h3><p>Destinasi bernuansa sejarah dan geologi yang mengundang rasa ingin tahu para penjelajah.</p></div></article>
+      <article class="card"><img class="card-photo" src="assets/goa-putri-pukes.png" alt="Goa Putri Pukes"><div class="card-body"><h3>Goa Putri Pukes</h3><p>Jelajahi ruang alam yang lekat dengan cerita dan legenda yang diwariskan turun-temurun.</p></div></article>
     </div>
   </div>
 </section>
@@ -96,7 +96,11 @@
   <div class="container">
     <div class="section-head"><span class="eyebrow">Galeri</span><h2>Potret perjalanan di Mendale</h2><p>Area ini siap diisi foto destinasi, kegiatan Pokdarwis, budaya, dan dokumentasi wisata terbaru.</p></div>
     <div class="gallery-grid">
-      <div class="gallery-box">AIR TERJUN</div><div class="gallery-box">GOA</div><div class="gallery-box">BUDAYA</div><div class="gallery-box">MENDALE</div><div class="gallery-box">PENGALAMAN</div>
+      <div class="gallery-box photo-box"><img src="assets/goa-putri-pukes.png" alt="Goa Putri Pukes"><span>GOA PUTRI PUKES</span></div>
+      <div class="gallery-box photo-box"><img src="assets/goa-manusia-purba-1.jpg" alt="Goa Manusia Purba"><span>GOA MANUSIA PURBA</span></div>
+      <div class="gallery-box photo-box"><img src="assets/mendale-dari-udara.jpg" alt="Mendale dari udara"><span>MENDALE</span></div>
+      <div class="gallery-box photo-box"><img src="assets/danau-mendale.jpg" alt="Danau Mendale"><span>DANAU MENDALE</span></div>
+      <div class="gallery-box photo-box"><img src="assets/pemandangan-mendale.jpg" alt="Pemandangan Mendale"><span>PESONA ALAM</span></div>
     </div>
   </div>
 </section>
